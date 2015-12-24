@@ -1,16 +1,44 @@
 //login.js
 $(document).ready(function(){
-   $('#loginBtn').click(function(){
-        var admin_name = $('#admin_name').val();
-        var admin_pass = $('#admin_pass').val();
-        if((!admin_name)||(admin_name.length<6 ||admin_name.length>12)){
-            $('#loginBtn').attr('data-content','重新输入，二货用户名输入不对应该是6-12位的数字，字母，字符，或者中文！！！！');
-            $("#loginBtn").popover({placement:'bottom'});
-            return false;
-            //alert('用户名不对');
-            //return false;
-        }
 
+
+   $('#loginBtn').click(function(){
+        var admin_name = $('input[name=admin_name]').val();
+        var admin_pass = $('input[name=admin_pass]').val();
+        //用户名
+        if((!admin_name)||(admin_name.length<6 ||admin_name.length>12)){
+            $(".tooltip-options").tooltip('show');
+            setTimeout(function(){
+                $(".tooltip-options").tooltip('hide');
+            },2000)
+            $("input[name=admin_name]").focus();
+            return false;
+        }
+        //密码
+        if(!admin_pass){
+            $(".tooltip-optionss").tooltip('show');
+            setTimeout(function(){
+                $(".tooltip-optionss").tooltip('hide');
+            },2000)
+            $("input[name=admin_pass]").focus();
+            return false;
+        }
+        //执行登录ajax
+        $.ajax({
+            url:'/Admin/login/select-admin-name',
+            type:'POST',
+            headers: {
+
+                'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
+
+            },
+            data:{
+                admin_name:admin_name,
+                admin_pass:admin_pass,
+            }
+        }).done(function(res){
+            alert(res);
+        });
 
 
    })

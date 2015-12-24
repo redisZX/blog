@@ -14,19 +14,16 @@
             <div class="col-md-4 col-md-offset-4">
                 <div class="login-panel panel panel-default">
                     <div class="panel-heading">
-                        <h3 class="panel-title">登录ZHAOXIN_BLOG_CMS管理后台</h3>
+                        <h3 class="panel-title">Welcome Zhaoxin BLOG CMS</h3>
                     </div>
                     <div class="panel-body">
                         <form role="form">
                             <fieldset>
                                 <div class="form-group">
-                                    <button type="button" class="btn btn-default" data-container="body" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">
-                                        Popover on 左侧
-                                    </button>
-                                    <input class="form-control" placeholder="管理员账户" name="admin_name" id="admin_name"   autofocus>
+                                    <input class="form-control tooltip-options " data-placement="bottom" data-toggle="tooltip"  title="二货！用户名不对,你肯定想搞破坏！！！" placeholder="管理员账户" name="admin_name"  autofocus>
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" placeholder="密码" name="password"  id="admin_pass" type="password" value="">
+                                    <input class="form-control tooltip-optionss" data-placement="bottom" data-toggle="tooltip" title="二货！密码不对,你是来搞破坏的对不对！！！"  placeholder="密码" name="admin_pass" type="password" value="">
                                 </div>
                                 <div class="checkbox">
                                     <label>
@@ -34,7 +31,7 @@
                                     </label>
                                 </div>
                                 <!-- Change this to a button or input when using this as a form -->
-                                <a href="javascript:;" id="loginBtn" class="btn btn-lg btn-success btn-block" data-content="你是那个，想搞啥子，分分钟弄死你!">Login</a>
+                                <a href="javascript:;" id="loginBtn" class="btn btn-lg btn-success btn-block">Login</a>
                             </fieldset>
                         </form>
                     </div>

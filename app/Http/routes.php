@@ -41,7 +41,8 @@ Route::group(['prefix'=>'Home', 'namespace' => 'Home'], function(){
 //前台
 Route::group(['prefix'=>'Admin', 'namespace' => 'Admin'], function(){
 
-    Route::get('login','LoginController@Login');
+    Route::Controller('login', 'LoginController'); //
+    // Route::get('login','LoginController@Login');
     Route::get('index', 'IndexController@index'); //首页控制器
 
 });
