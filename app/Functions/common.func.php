@@ -31,6 +31,12 @@
 
       }
    }
+   //输出Json 数据
+   if(!function_exists('ajax_return')){
+       function ajax_return(){
+            return '1111111111111111111111111';
+       }
+   }
 
 
 

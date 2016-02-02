@@ -1,43 +1,38 @@
 @extends('Admin.Layout.master')
 
 @section('title')
-    ZhaoXin_BLOGCMS
+    凡语BLOG_CMS
 @stop
 
 @section('css')
-    <!--<link rel="stylesheet" type="text/css" href="<?= env("STATIC_URL")?>/style/css/commen.css">-->
+    <link href="<?= env("STATIC_URL")?>style/css/Admin/login/style.css" rel='stylesheet' type='text/css' />
 @stop
 
 @section('content')
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4 col-md-offset-4">
-                <div class="login-panel panel panel-default">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Welcome Zhaoxin BLOG CMS</h3>
-                    </div>
-                    <div class="panel-body">
-                        <form role="form">
-                            <fieldset>
-                                <div class="form-group">
-                                    <input class="form-control tooltip-options " data-placement="bottom" data-toggle="tooltip"  title="二货！用户名不对,你肯定想搞破坏！！！" placeholder="管理员账户" name="admin_name"  autofocus>
-                                </div>
-                                <div class="form-group">
-                                    <input class="form-control tooltip-optionss" data-placement="bottom" data-toggle="tooltip" title="二货！密码不对,你是来搞破坏的对不对！！！"  placeholder="密码" name="admin_pass" type="password" value="">
-                                </div>
-                                <div class="checkbox">
-                                    <label>
-                                        <input name="remember" type="checkbox" value="记住密码">记住密码
-                                    </label>
-                                </div>
-                                <!-- Change this to a button or input when using this as a form -->
-                                <a href="javascript:;" id="loginBtn" class="btn btn-lg btn-success btn-block">Login</a>
-                            </fieldset>
-                        </form>
-                    </div>
-                </div>
-            </div>
+    <h1>凡语@N。  CMS</h1>
+    <div class="login-form">
+        <div class="close"> </div>
+        <div class="head-info">
+            <label class="lbl-1"> </label>
+            <label class="lbl-2"> </label>
+            <label class="lbl-3"> </label>
         </div>
+        <div class="clear"> </div>
+        <div class="avtar">
+            <img src="<?= env("STATIC_URL")?>style/image/Admin/login/avtar.png" />
+        </div>
+        <form>
+            <input type="text" id="user_name" class="text" value="Username" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}" >
+            <div class="key">
+                <input type="password" id="user_pass" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}">
+            </div>
+        </form>
+        <div class="signin">
+            <input type="submit" value="Login"  id="admin_login">
+        </div>
+    </div>
+    <div class="copy-rights">
+        <p>Copyright &copy; 2015.凡语 <a href="#" target="_blank" title="">凡语</a> - Collect from <a href="#" title="" target="_blank">凡语</a></p>
     </div>
 @stop
 @section('js')

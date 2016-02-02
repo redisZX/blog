@@ -43,7 +43,7 @@ Route::group(['prefix'=>'Admin', 'namespace' => 'Admin'], function(){
 
     Route::Controller('login', 'LoginController'); //
     // Route::get('login','LoginController@Login');
-    Route::get('index', 'IndexController@index'); //首页控制器
+   // Route::get('index', 'IndexController@index'); //首页控制器
 
 });
 
